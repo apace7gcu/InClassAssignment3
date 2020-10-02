@@ -1,4 +1,22 @@
-﻿using System;
+﻿/* Amanda Pace
+ * CST-117
+ * Bill Hughes
+ * 
+ * 10/02/2020
+ * 
+ * This is a program that takes a number the user
+ * enters as their weight on earth, and converts it
+ * into what their weight on mars would be.
+ * 
+ * This is an assignment done in-class as a group, 
+ * code is primarily from the professor.
+ * 
+ */
+
+
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
