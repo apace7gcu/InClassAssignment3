@@ -47,18 +47,28 @@ namespace InClassAssignment3
 
         private void bttnConvert_Click(object sender, EventArgs e)
         {
-            //Define variables
-            //Input value for weight on Earth
-            decimal earthWeight = 0;
-            decimal earthMass = 0;
-            decimal gravAccEarth = Convert.ToDecimal(9.81);
-            decimal gravAccMars = Convert.ToDecimal(3.71);
-            // Read in the earth weight
-            earthWeight = Convert.ToDecimal(textearthWeight.Text);
-            //Find the mass on Earth
-            earthMass = earthWeight * gravAccEarth;
-            //find weight on Mars
-            textmarsWeight.Text = ((earthMass * gravAccMars) / 100).ToString();
+                //Define variables
+                //Input value for weight on Earth
+                decimal earthWeight = 0;
+                decimal earthMass = 0;
+                decimal gravAccEarth = Convert.ToDecimal(9.81);
+                decimal gravAccMars = Convert.ToDecimal(3.71);
+
+            try
+            {
+                // Read in the earth weight
+                earthWeight = Convert.ToDecimal(textearthWeight.Text);
+                //Find the mass on Earth
+                earthMass = earthWeight * gravAccEarth;
+                //find weight on Mars
+                textmarsWeight.Text = ((earthMass * gravAccMars) / 100).ToString("#,0.000");
+            }
+
+            catch
+            {
+                MessageBox.Show("You must enter a number for for the calculation to execute. Please try again. (:");
+            }
         }
     }
 }
+
